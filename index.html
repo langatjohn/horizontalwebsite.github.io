@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>horizontal website</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+
+        }
+        .center{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        
+        }
+        .content{
+            width: 100vh;
+            height: 100vw;
+            position: relative;
+            transform-origin: left top;
+            transform: rotate(-90deg)
+            translatex(-100%);
+            overflow: auto;
+        }
+        .nav{
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            position: sticky;
+            top: 0;
+            left: 0;
+            mix-blend-mode: difference;
+
+        }
+        .logo{
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translate(0, -50%) rotate(90deg);
+            /* font-family: Georgia, 'Times New Roman', Times, serif; */
+            font-family: fantasy;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .title{
+            font-size: 16px;
+            font-family: fantasy;
+            margin: 0 20px;
+        }
+        .page{
+            width: 100vh;
+            height: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            color: black;
+            font-family: fantasy;
+            font-size: 60px;
+
+
+        }
+        .page:nth-child(even){
+            background: black;
+            color: white;
+
+        }
+        .page-content{
+            transform: rotate(90deg);
+        }
+        .content::-webkit-scrollbar{
+            display: none;
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div class="content">
+            <div class="nav">
+                <div class="logo">LOGO</div>
+                <div class="title">home</div>
+                <div class="title">about</div>
+                <div class="title">contact</div>
+
+            </div>
+            <div class="page">
+                <div class="page-content">my site</div>
+
+            </div>
+            <div class="page">
+                <div class="page-content">contact us</div>
+                
+            </div>
+            <div class="page">
+                <div class="page-content">About us</div>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
